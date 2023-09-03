@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="change">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="1em"
+        viewBox="0 0 576 512"
+        class="off"
+      >
+        <path
+          d="M384 64H192C85.961 64 0 149.961 0 256s85.961 192 192 192h192c106.039 0 192-85.961 192-192S490.039 64 384 64zM64 256c0-70.741 57.249-128 128-128 70.741 0 128 57.249 128 128 0 70.741-57.249 128-128 128-70.741 0-128-57.249-128-128zm320 128h-48.905c65.217-72.858 65.236-183.12 0-256H384c70.741 0 128 57.249 128 128 0 70.74-57.249 128-128 128z"
+        />
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="1em"
+        viewBox="0 0 576 512"
+        class="on"
+      >
+        <path
+          d="M384 64H192C86 64 0 150 0 256s86 192 192 192h192c106 0 192-86 192-192S490 64 384 64zm0 320c-70.8 0-128-57.3-128-128 0-70.8 57.3-128 128-128 70.8 0 128 57.3 128 128 0 70.8-57.3 128-128 128z"
+        />
+      </svg>
+    </div>
+    <div class="container">
+      <div class="calculator">
+        <form>
+          <div class="display-wrapper">
+            <input type="text" name="display" class="display visual" />
+          </div>
+          <div class="result-wrapper">
+            <input type="text" name="result" class="visual result" />
+          </div>
+          <div class="row">
+            <input
+              type="button"
+              value="C"
+              onclick="display.value = result.value = ''   "
+            />
+            <input type="button" value="(" onclick="display.value += '('" />
+            <input type="button" value=")" onclick="display.value += ')'" />
+            <input
+              type="button"
+              value="/"
+              onclick="display.value += '/'"
+              class="operators"
+            />
+          </div>
+          <div class="row">
+            <input type="button" value="7" onclick="display.value += '7'" />
+            <input type="button" value="8" onclick="display.value += '8'" />
+            <input type="button" value="9" onclick="display.value += '9'" />
+            <input
+              type="button"
+              value="*"
+              onclick="display.value += '*'"
+              class="operators"
+            />
+          </div>
+          <div class="row">
+            <input type="button" value="4" onclick="display.value += '4'" />
+            <input type="button" value="5" onclick="display.value += '5'" />
+            <input type="button" value="6" onclick="display.value += '6'" />
+            <input
+              type="button"
+              value="-"
+              onclick="display.value += '-'"
+              class="operators"
+            />
+          </div>
+          <div class="row">
+            <input type="button" value="1" onclick="display.value += '1'" />
+            <input type="button" value="2" onclick="display.value += '2'" />
+            <input type="button" value="3" onclick="display.value += '3'" />
+            <input
+              type="button"
+              value="+"
+              onclick="display.value += '+'"
+              class="operators"
+            />
+          </div>
+          <div class="row">
+            <input
+              type="button"
+              value="0"
+              onclick="display.value += '0'"
+              class="big"
+            />
+            <input type="button" value="." onclick="display.value += '.'" />
+            <input
+              type="button"
+              value="="
+              onclick="result.value = eval(display.value)"
+              class="equal"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

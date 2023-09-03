@@ -1,0 +1,101 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 30px 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.calculator {
+  background-color: #f6f8f9;
+  padding: 20px 40px;
+  width: 50%;
+  border-radius: 30px;
+}
+
+form div input.visual {
+  width: 100%;
+  border-radius: 0;
+  color: #4e555b;
+  box-shadow: none;
+  background-color: #f6f8f9;
+  text-align: right;
+}
+
+form div input.result {
+  font-size: 45px;
+  display: inline-block;
+}
+form div input.display {
+  z-index: 99;
+}
+
+form div {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+
+form div input {
+  border: 0;
+  font-family: "Open Sans";
+  outline: 0;
+  width: 20%;
+  height: 70px;
+  border-radius: 30px;
+  background-color: #e8f1f4;
+  margin: 7px;
+  box-shadow: 5px 5px 15px #00000014;
+  font-size: 24px;
+  color: #4e555b;
+}
+
+.big {
+  width: 43%;
+}
+
+.operators {
+  background-color: #ff9401;
+  color: #fff;
+}
+.equal {
+  background-color: #2ec872;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .calculator {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 520px) {
+  .calculator {
+    width: 100%;
+  }
+
+  form div input.result {
+    font-size: 38px;
+  }
+
+  form div {
+    width: 100%;
+  }
+
+  form div input {
+    width: 20%;
+    height: 70px;
+    border-radius: 25px;
+    margin: 6px;
+    font-size: 20px;
+  }
+}
