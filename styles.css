@@ -101,6 +101,7 @@ div input {
 @media screen and (max-width: 520px) {
   .calculator {
     width: 100%;
+    border-radius: none;
   }
 
   form div input.result {
