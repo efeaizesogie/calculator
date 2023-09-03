@@ -6,13 +6,32 @@
   box-sizing: border-box;
 }
 
+.change {
+  font-family: "Open Sans";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px 0;
+  gap: 14px;
+}
+
+.change svg {
+  width: 34px;
+  height: 34px;
+}
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 30px 0;
+  padding: 20px 0;
   font-family: "Open Sans", sans-serif;
+}
+
+.dark {
+  display: none;
 }
 
 .calculator {
@@ -33,6 +52,7 @@ form div input.visual {
 
 form div input.result {
   font-size: 45px;
+  color: #131823;
   display: inline-block;
 }
 form div input.display {
@@ -46,7 +66,7 @@ form div {
   margin: 0 auto;
 }
 
-form div input {
+div input {
   border: 0;
   font-family: "Open Sans";
   outline: 0;
